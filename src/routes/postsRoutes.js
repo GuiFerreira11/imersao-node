@@ -22,7 +22,7 @@ const upload = multer({ dest: "./uploads" , storage})
 const routes = (app) => {
   // Permite que o servidor interprete requisições com corpo no formato JSON
   app.use(express.json());
-  app.use(cors(corsOptions))
+  app.use(cors(corsOptions));
   // Rota para buscar todos os posts
   app.get("/posts", listarPosts);
   // Rota para criar um post
